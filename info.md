@@ -12,6 +12,7 @@
 - Tailwind CSS IntelliSense (para o vscode);
 - Storybook (para criar adicionar utilizei `npx sb init --builder @storybook/builder-vite --use-npm`. aqui eu instalo o sb 'storybook' em seguida falo para utilizar o vite como builder para compilar o código ao invés do webpack que é o padrão e depois digo que estou utilizando o npm);
 - clsx (utilizado para construir className condicional)
+- phosphor-react (lib de icones para o react)
 
 # Quem é Vite:
 - Substitui o babel e converte para o javascript que os navegadores entendão

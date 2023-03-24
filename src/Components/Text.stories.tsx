@@ -8,8 +8,7 @@ export default {
   component: Text,
   args: {
     children: 'Loren ipsum.',
-    size: 'sm',
-    asChild: false,
+    size: 'md',
   },
   argTypes: {
     size: {
@@ -38,10 +37,15 @@ export const Large: StoryObj<TextProps> = {
 export const CustomComponent: StoryObj<TextProps> = {
   args: {
     asChild: true,
-    children: (<p>Testando</p>),
+    children: (<p>Text with P tag</p>),
   },
   argTypes: {
     children: {
+      table: {
+        disable: true,
+      },
+    },
+    asChild: {
       table: {
         disable: true,
       },
