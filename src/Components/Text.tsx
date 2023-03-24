@@ -5,10 +5,13 @@ import { clsx } from 'clsx';
 export interface TextProps {
     size?: 'sm' | 'md' | 'lg';
     children : ReactNode;
-    asChild: boolean;
+    asChild?: boolean;
+    className?: string
 }
 
-export function Text({ size = 'md', children, asChild }: TextProps) {
+export function Text({
+  size = 'md', children, asChild, className,
+}: TextProps) {
   const Comp = asChild ? Slot : 'span';
 
   return (
@@ -20,6 +23,7 @@ export function Text({ size = 'md', children, asChild }: TextProps) {
           'text-sm': size === 'md',
           'text-md': size === 'lg',
         },
+        className,
       )}
     >
       {children}
@@ -29,4 +33,6 @@ export function Text({ size = 'md', children, asChild }: TextProps) {
 
 Text.defaultProps = {
   size: 'md',
+  asChild: false,
+  className: 'text-gray-100 font-sans',
 };
